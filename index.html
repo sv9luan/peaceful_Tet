@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2023</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./icon.png" type="image/x-icon" />
+
+</head>
+<body>
+ 
+  <div class="loading">
+    <h2>2022</h2>
+    <div class="bar"></div>
+    <h2>2023</h2>
+  </div>
+  <div class="center">
+    <div><h2>Happy New Year</h2></div>
+    <div></div>
+    <div><h2>2023!</h2></div>
+    <div>
+    </div>
+  </div>
+
+
+  <marquee behavior="" direction="">Đếm ngược thời gian nào Tết Quý Mão 2023 !!!</marquee>
+    
+    <div class="item">
+        <p>DAYS</p>
+        <span id="days">Days</span>
+    </div>
+
+    <div class="item">
+        <p>HOURS</p>
+        <span id="hours">Hours</span>
+    </div>
+
+    <div class="item">
+        <p>MINUTES</p>
+        <span id="minutes">Minutes</span>
+    </div>
+
+    <div class="item">
+        <p>SECONDS</p>
+        <span id="seconds">Seconds</span>
+    </div>
+    <audio autoplay src="./Tet Binh An - Hana Cam Tien.mp3"></audio>
+</body>
+<script>
+  var fuT = new Date("jan 22, 2023 00:00:00").getTime()
+  setInterval(function(){
+      var noW = new Date().getTime()
+      var D = fuT - noW
+      var days = Math.floor(D/(1000*60*60*24))
+      var hours = Math.floor(D/(1000*60*60))
+      var minutes = Math.floor(D/(1000*60))
+      var seconds = Math.floor(D/(1000))
+
+      hours %=24
+      minutes %=60
+      seconds %=60
+
+      document.getElementById("days").innerText = days
+      document.getElementById("hours").innerText = hours
+      document.getElementById("minutes").innerText = minutes
+      document.getElementById("seconds").innerText = seconds
+
+  })
+</script>
+</html>
